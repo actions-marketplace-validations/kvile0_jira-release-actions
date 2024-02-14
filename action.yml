@@ -1,4 +1,4 @@
-name: 'Jira Release/Archive Action'
+name: 'Jira Release/Archive Action Fork'
 description: 'Create, Release or Archive a Jira Fix Version'
 author: 'Justin Liu'
 branding:
