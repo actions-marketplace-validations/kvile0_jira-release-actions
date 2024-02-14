@@ -9,7 +9,7 @@ export class API {
   domain: string
 
   constructor(email: string, token: string, name: string, domain: string) {
-    this.authToken = `${Buffer.from(`${token}`).toString('base64')}`
+    this.authToken = token
     this.projectName = name
     this.domain = domain
   }
