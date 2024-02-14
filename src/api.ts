@@ -8,7 +8,7 @@ export class API {
   projectName: string
   domain: string
 
-  constructor(email: string, token: string, name: string, domain: string) {
+  constructor(token: string, name: string, domain: string) {
     this.authToken = token
     this.projectName = name
     this.domain = domain
@@ -78,7 +78,7 @@ export class API {
 
   _headers(): { Authorization: string; Accept: string; 'Content-Type': string } {
     return {
-      Authorization: `Basic ${this.authToken}`,
+      Authorization: `Bearer ${this.authToken}`,
       Accept: 'application/json',
       'Content-Type': 'application/json'
     }
