@@ -1,7 +1,6 @@
 import { getInput, getBooleanInput } from '@actions/core'
 
 // Jira API credentials
-export const EMAIL: string = getInput('jira_user_email', { required: true })
 export const API_TOKEN: string = getInput('jira_api_token', { required: true })
 export const SUBDOMAIN: string = getInput('jira_base_url', { required: true })
 
