@@ -23,7 +23,6 @@ jobs:
       uses: justin-jhg/jira-release-actions@v1
       with:
         jira_base_url: ${{ secrets.JIRA_BASE_URL }}
-        jira_user_email: ${{ secrets.JIRA_USER_EMAIL }}
         jira_api_token: ${{ secrets.JIRA_API_TOKEN }}
         jira_project: CI
         release_name: v9.0.2
@@ -42,8 +41,7 @@ jobs:
 |Name |Description |Required? |Type |
 |---|---|---|---|
 | jira_base_url  | URL of Jira instance. Example: `https://<yourdomain>.atlassian.net` | Yes | String |
-| jira_api_token | **Access Token** for Authorization. Example: `HXe8DGg1iJd2AopzyxkFB7F2` ([How To](https://confluence.atlassian.com/cloud/api-tokens-938839638.html)) | Yes | String |
-| jira_user_email | email of the user for which **Access Token** was created for . Example: `human@example.com` | Yes | String |
+| jira_api_token | **Access Token** for Authorization. Example: `HXe8DGg1iJd2AopzyxkFB7F2` ([How To](https://confluence.atlassian.com/enterprise/using-personal-access-tokens-1026032365.html)) | Yes | String |
 | jira_project | Key of the jira project | Yes | String |
 | release_name | Name of the release (Fix Version) | Yes | String |
 | time_zone | timezone for release date to be set, e.g. Australia/Melbourne, default is UTC time | No | String |
@@ -55,7 +53,7 @@ jobs:
 
 ## Reference
 
-* [Jira Basic authentication](https://developer.atlassian.com/server/jira/platform/basic-authentication/)
-* [Repository the code was forked from](https://github.com/StalemateInc/jira-release-action)
+* [Jira PAT authentication](https://confluence.atlassian.com/enterprise/using-personal-access-tokens-1026032365.html)
+* [Repository the code was forked from](https://github.com/Justin-JHG/jira-release-actions)
 * https://github.com/actions/typescript-action
 * https://github.com/vercel/ncc

@@ -8,9 +8,6 @@ inputs:
   jira_base_url:
     description: URL of Jira instance. Example - https://<yourdomain>.atlassian.net
     required: true
-  jira_user_email:
-    description: email of the user for which Access Token was created for . Example - human@example.com
-    required: true
   jira_api_token:
     description: Personal Access Token for Authorization. Example - HXe8DGg1iJd2AopzyxkFB7F2 (How To)
     required: true
@@ -39,7 +36,7 @@ inputs:
   create:
     description: Create a Jira release.
     default: 'true'
-    required: false  
+    required: false
   dry_run:
     description: Perform only read actions and show the logs.
     default: 'false'
