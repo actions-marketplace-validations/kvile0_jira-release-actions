@@ -17,7 +17,7 @@ import { CreateVersionParams, UpdateVersionParams } from './types'
 
 const printConfiguration = (): void => {
   info(`
-    CONFIGURED WITH OPTIONS:
+    CONFIGURED WITH THESE OPTIONS:
       * project: ${PROJECT}
       * subdomain: ${SUBDOMAIN}
       * release_name: ${RELEASE_NAME}
