@@ -16,7 +16,7 @@ export class API {
 
   async createVersion(body: CreateVersionParams): Promise<JiraVersion> {
     try {
-      const response = await axios.post<JiraVersion>(`${this.domain}/rest/api/3/version`, body, {
+      const response = await axios.post<JiraVersion>(`${this.domain}/rest/api/2/version`, body, {
         headers: this._headers()
       })
 
@@ -30,7 +30,7 @@ export class API {
     try {
       debug(JSON.stringify(body))
 
-      const response = await axios.put<JiraVersion>(`${this.domain}/rest/api/3/version/${id}`, body, {
+      const response = await axios.put<JiraVersion>(`${this.domain}/rest/api/2/version/${id}`, body, {
         headers: this._headers()
       })
 
@@ -44,7 +44,7 @@ export class API {
   async updateIssue(ticket_id: string, version_id: string): Promise<any> {
     try {
       const response = await axios.put(
-        `${this.domain}/rest/api/3/issue/${ticket_id}`,
+        `${this.domain}/rest/api/2/issue/${ticket_id}`,
         {
           update: {
             fixVersions: [
@@ -66,7 +66,7 @@ export class API {
   async loadProject(): Promise<JiraProject> {
     try {
       const response = await axios.get<JiraProject>(
-        `${this.domain}/rest/api/3/project/${this.projectName}?properties=versions,key,id,name`,
+        `${this.domain}/rest/api/2/project/${this.projectName}?properties=versions,key,id,name`,
         { headers: this._headers() }
       )
 
