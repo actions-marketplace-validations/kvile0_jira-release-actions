@@ -1,6 +1,5 @@
 import { info, setFailed } from '@actions/core'
 import {
-  EMAIL,
   API_TOKEN,
   SUBDOMAIN,
   RELEASE_NAME,
@@ -19,7 +18,6 @@ import { CreateVersionParams, UpdateVersionParams } from './types'
 const printConfiguration = (): void => {
   info(`
     CONFIGURED WITH OPTIONS:
-      * email ${EMAIL}
       * project: ${PROJECT}
       * subdomain: ${SUBDOMAIN}
       * release_name: ${RELEASE_NAME}
@@ -39,7 +37,7 @@ async function run(): Promise<void> {
       return
     }
 
-    const api = new API(EMAIL, API_TOKEN, PROJECT, SUBDOMAIN)
+    const api = new API(API_TOKEN, PROJECT, SUBDOMAIN)
     const project = await api.loadProject()
     info(DebugMessages.PROJECT_LOADED(project.id))
 
